@@ -1,0 +1,26 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<h1>Our Products</h1>
+
+{{#if discount}}
+<div class="alert alert-success">
+    CLEARANCE SALE UP TO 50% OFF!!
+</div>
+
+{{/if}}
+
+<ul>
+{{#each products}}  
+    {{#ifEquals this "Organic Cotton Socks"}}
+    <li style="background-color: yellow">{{this}}</li>
+    {{else}}
+    <li>{{this}}</li>
+    {{/ifEquals}}
+{{/each}}
+</ul>
+
+{{/block}}
+
+
+{{/extends}}
