@@ -1,0 +1,17 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<h1>New Food Added</h1>
+<ul>
+    <li>Food name: {{foodName}}</li>
+    <li>Calories: {{calories}}</li>
+    <li>Meal: {{meal}}</li>
+    <li>Tags: 
+        {{#each tags}}
+            <span class="badge bg-primary">{{this}}</span>
+        {{/each}}
+    </li>
+</ul>
+{{/block}}
+
+{{/extends}}

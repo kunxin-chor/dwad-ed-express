@@ -1,0 +1,46 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<h1>Add New Food Consumption</h1>
+<form method="POST">
+    <div>
+        <label>Enter name of food:</label>
+        <input type="text" name="foodName" class="form-control"/>
+    </div>
+    <div>
+        <label>Calories:</label>
+        <input type="number" name="calories" class="form-control"/>
+    </div> 
+    <div>
+        <label>Meal:</label>
+        <input type="radio" class="form-check-input" name="meal" value="breakfast"/>
+        <label class="form-check-label">Breakfast</label>
+        <input type="radio" class="form-check-input" name="meal" value="lunch" />
+        <label class="form-check-label">Lunch</label>
+        <input type="radio" class="form-check-input" name="meal" value="dinner"/>
+        <label class="form-check-label">Dinner</label>
+        <input type="radio" class="form-check-input" name="meal" value="snack"/>
+        <label class="form-check-label">Snack</label>
+    </div>
+    <div>
+        <label>Tags</label>
+        <input type="checkbox" class="form-check-input" name="tags" value="less-oil"/>
+        <label class="form-check-label">Less Oil</label>
+        <input type="checkbox" class="form-check-input" name="tags" value="organic"/>
+        <label class="form-check-label">Organic</label>
+        <input type="checkbox" class="form-check-input" name="tags" value="glutten-free"/>
+        <label class="form-check-label">Glutten Free</label>
+        <input type="checkbox" class="form-check-input" name="tags" value="home-cooked"/>
+        <label class="form-check-label">Home cooked</label>
+        <input type="checkbox" class="form-check-input" name="tags" value="vegetarian"/>
+        <label class="form-check-label">Vegetarian</label>       
+
+    </div>
+    <div>
+        <input type="submit" class="btn btn-primary mt-3"/>
+    </div>
+</form>
+
+{{/block}}
+
+{{/extends}}
