@@ -1,0 +1,36 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Food Name</th>
+            <th>Calories</th>
+            <th>Meal</th>
+            <th>Tags</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each allFood}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.foodName}}</td>
+            <td>{{this.calories}}</td>
+            <td>{{this.meal}}</td>
+            <td>{{this.tags}}</td>
+            <td>
+                <a href="/update-food/{{this.id}}" class="btn btn-primary btn-sm"b>Update</a>
+                <a href="/delete-food/{{this.id}}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+
+{{/block}}
+
+{{/extends}}
